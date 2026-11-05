@@ -1,44 +1,41 @@
 import Navbar from '@/components/layout/Navbar';
+import About from '@/components/sections/About';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <>
       <Navbar />
+
+      {/* ===== SECTION 1 - HERO ===== */}
       <main className='min-h-screen bg-black text-white relative overflow-hidden'>
-        {/* Background Grid Teal Left - Persis Figma */}
+        {/* Background Grid Teal */}
         <div className='absolute inset-0'>
           <div
-            className='absolute top-0 left-0 w-[62%] h-full bg-[#022A2E] opacity-100'
+            className='absolute top-0 left-0 w-full lg:w-[62%] h-full opacity-40'
             style={{
-              backgroundImage: `linear-gradient(to right, rgba(0,255,255,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,255,255,0.08) 1px, transparent 1px)`,
+              backgroundColor: '#0a2e30',
+              backgroundImage: `linear-gradient(rgba(20,184,166,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(20,184,166,0.15) 1px, transparent 1px)`,
               backgroundSize: '26px 26px',
             }}
           />
-          <div className='absolute top-0 left-0 w-[62%] h-full bg-gradient-to-r from-transparent via-black/40 to-black' />
-          <div className='absolute top-0 left-0 w-[62%] h-full bg-gradient-to-b from-transparent to-black/80' />
+          <div className='absolute top-0 left-0 w-full lg:w-[62%] h-full bg-gradient-to-r from-transparent to-black' />
         </div>
 
-        <section className='relative z-10 max-w-[1200px] mx-auto px-6 lg:px-10 pt-[110px] lg:pt-[140px] pb-20 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10'>
-          {/* LEFT */}
-          <div className='max-w-[560px]'>
-            <p className='text-white/70 text-[12px] mb-5 tracking-wide'>
+        <section className='relative z-10 max-w-[1200px] mx-auto px-6 lg:px-10 pt-[100px] lg:pt-[140px] pb-12 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-0'>
+          {/* LEFT TEXT */}
+          <div className='order-2 lg:order-1 max-w-[560px] w-full'>
+            <p className='text-white/70 text-[12px] mb-5'>
               Hi. I'm Edwin Anderson
             </p>
 
-            <h1 className='leading-[0.9] tracking-tighter'>
-              <span className='flex items-baseline gap-1 text-[44px] sm:text-[62px] lg:text-[68px] font-black'>
-                FRONT
-                <span className='font-serif italic font-light text-[48px] sm:text-[68px] lg:text-[74px] -ml-1'>
-                  END
-                </span>
-              </span>
-              <span className='block text-[44px] sm:text-[62px] lg:text-[68px] font-black'>
-                DEVELOPER
-              </span>
+            <h1 className='font-serif font-bold leading-[0.9] tracking-tighter text-[42px] sm:text-[56px] lg:text-[68px]'>
+              FRONT<span className='italic font-light'>END</span>
+              <br />
+              DEVELOPER
             </h1>
 
-            <p className='mt-6 text-white/40 text-[11px] sm:text-[12px] leading-[1.7] max-w-[440px]'>
+            <p className='mt-6 text-white/40 text-[12px] leading-[1.7] max-w-[440px]'>
               Passionate about frontend development, I focus on crafting digital
               products that are visually polished, performance-optimized, and
               deliver a consistent experience across all platforms.
@@ -46,49 +43,48 @@ export default function Home() {
 
             <a
               href='#'
-              className='mt-8 inline-flex items-center justify-center gap-2 bg-[#1B9AAA] hover:bg-[#178a99] transition w-[140px] h-[36px] text-[11px] font-semibold tracking-wide'
+              className='mt-8 inline-flex items-center gap-2 bg-[#1B9AAA] hover:bg-[#178a99] transition px-8 py-[10px] text-[11px] font-semibold'
             >
-              <span className='text-[14px]'>✉</span> Hire Me
+              ✉ Hire Me
             </a>
           </div>
 
-          {/* RIGHT - ID CARD */}
-          <div className='relative mx-auto lg:mx-0 lg:mr-10 mt-4 lg:mt-0'>
-            {/* Lanyard */}
-            <div className='absolute -top-[54px] left-1/2 -translate-x-1/2 z-20 flex flex-col items-center'>
-              <div className='w-[38px] h-[56px] bg-[#1e1e1e] rounded-[4px] flex justify-center pt-2'>
-                <div className='w-[14px] h-[14px] bg-[#0f0f0f] rounded-full border border-black shadow-inner flex items-center justify-center'>
-                  <div className='w-[5px] h-[5px] bg-black rounded-full'></div>
-                </div>
+          {/* RIGHT ID CARD */}
+          <div className='order-1 lg:order-2 relative lg:mr-10'>
+            {/* Lanyard Clip */}
+            <div className='absolute -top-[48px] left-1/2 -translate-x-1/2 z-20 flex flex-col items-center'>
+              <div className='w-[36px] h-[52px] bg-[#1e1e1e] rounded-[4px] flex justify-center pt-2 shadow-md'>
+                <div className='w-[12px] h-[12px] bg-[#0a0a0a] rounded-full border border-white/10'></div>
               </div>
-              <div className='w-[34px] h-[28px] bg-[#111] -mt-1 rounded-b-[6px] flex flex-col items-center'>
-                <div className='w-[24px] h-[14px] bg-black mt-[2px] rounded-[3px]'></div>
-                <div className='w-[18px] h-[6px] bg-[#222] mt-[10px] rounded-[2px]'></div>
+              <div className='w-[30px] h-[10px] bg-black -mt-1'></div>
+              <div className='w-[30px] h-[18px] bg-[#111] -mt-[1px] rounded-b-[6px] flex justify-center pt-1'>
+                <div className='w-[18px] h-[6px] bg-black rounded-[2px]'></div>
               </div>
             </div>
 
-            {/* Card */}
-            <div className='relative w-[280px] sm:w-[300px] h-[400px] sm:h-[420px] bg-[#f0f0f0] rounded-[12px] overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.7)]'>
-              {/* Blue Brush Stroke */}
+            <div className='relative w-[280px] sm:w-[300px] lg:w-[320px] h-[380px] sm:h-[420px] bg-white rounded-[12px] overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.7)]'>
               <div
-                className='absolute top-[58%] left-[12%] w-[78%] h-[42px] bg-[#1B9AAA] rotate-[-12deg] rounded-[4px]'
+                className='absolute top-[58%] left-[10%] w-[80%] h-[38px] bg-[#1B9AAA] rotate-[-12deg]'
                 style={{
                   clipPath:
-                    'polygon(0% 30%, 15% 10%, 85% 0%, 100% 30%, 90% 85%, 20% 100%, 0% 70%)',
+                    'polygon(2% 30%, 85% 5%, 100% 40%, 80% 100%, 5% 85%)',
                 }}
               />
               <Image
                 src='/edwin anderson.png'
                 alt='Edwin'
-                width={300}
+                width={320}
                 height={420}
-                className='absolute bottom-0 left-0 w-full h-[92%] object-cover object-top'
+                className='absolute bottom-0 w-full h-[92%] object-cover object-top'
                 priority
               />
             </div>
           </div>
         </section>
       </main>
+
+      {/* ===== SECTION 2 - ABOUT ===== */}
+      <About />
     </>
   );
 }
