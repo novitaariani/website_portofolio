@@ -2,6 +2,7 @@ import Navbar from '@/components/layout/Navbar';
 import About from '@/components/sections/About';
 import Skills from '@/components/sections/Skills';
 import Comparison from '@/components/sections/Comparison';
+import Portfolio from '@/components/sections/Portfolio';
 import Image from 'next/image';
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      {/* ===== SECTION 1 - HERO ===== */}
+      {/* SECTION 1 HERO */}
       <main className='min-h-screen bg-black text-white relative overflow-hidden'>
         <div className='absolute inset-0'>
           <div
@@ -22,7 +23,6 @@ export default function Home() {
           />
           <div className='absolute top-0 left-0 w-full lg:w-[62%] h-full bg-gradient-to-r from-transparent to-black' />
         </div>
-
         <section className='relative z-10 max-w-[1200px] mx-auto px-6 lg:px-10 pt-[100px] lg:pt-[140px] pb-12 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-0'>
           <div className='order-2 lg:order-1 max-w-[560px] w-full'>
             <p className='text-white/70 text-[12px] mb-5'>
@@ -45,7 +45,6 @@ export default function Home() {
               ✉ Hire Me
             </a>
           </div>
-
           <div className='order-1 lg:order-2 relative lg:mr-10'>
             <div className='absolute -top-[48px] left-1/2 -translate-x-1/2 z-20 flex flex-col items-center'>
               <div className='w-[36px] h-[52px] bg-[#1e1e1e] rounded-[4px] flex justify-center pt-2 shadow-md'>
@@ -77,14 +76,10 @@ export default function Home() {
         </section>
       </main>
 
-      {/* ===== SECTION 2 - ABOUT ===== */}
       <About />
-
-      {/* ===== SECTION 3 - TOOLS ===== */}
       <Skills />
-
-      {/* ===== SECTION 4 - COMPARISON ===== */}
       <Comparison />
+      <Portfolio />
     </>
   );
 }
