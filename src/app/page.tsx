@@ -6,6 +6,7 @@ import Portfolio from '@/components/sections/Portfolio';
 import Journey from '@/components/sections/Journey';
 import Testimonials from '@/components/sections/Testimonials';
 import FAQ from '@/components/sections/FAQ';
+import Contact from '@/components/sections/Contact';
 import Image from 'next/image';
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
               products that are visually polished.
             </p>
             <a
-              href='#'
+              href='#contact'
               className='mt-8 inline-flex bg-[#1B9AAA] px-8 py-[10px] text-[11px] font-semibold'
             >
               ✉ Hire Me
@@ -66,6 +67,7 @@ export default function Home() {
       <Journey />
       <Testimonials />
       <FAQ />
+      <Contact />
     </>
   );
 }
