@@ -1,6 +1,7 @@
 import Navbar from '@/components/layout/Navbar';
 import About from '@/components/sections/About';
 import Skills from '@/components/sections/Skills';
+import Comparison from '@/components/sections/Comparison';
 import Image from 'next/image';
 
 export default function Home() {
@@ -79,8 +80,11 @@ export default function Home() {
       {/* ===== SECTION 2 - ABOUT ===== */}
       <About />
 
-      {/* ===== SECTION 3 - SKILLS ===== */}
+      {/* ===== SECTION 3 - TOOLS ===== */}
       <Skills />
+
+      {/* ===== SECTION 4 - COMPARISON ===== */}
+      <Comparison />
     </>
   );
 }
