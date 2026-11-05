@@ -3,14 +3,13 @@ import About from '@/components/sections/About';
 import Skills from '@/components/sections/Skills';
 import Comparison from '@/components/sections/Comparison';
 import Portfolio from '@/components/sections/Portfolio';
+import Journey from '@/components/sections/Journey';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <>
       <Navbar />
-
-      {/* SECTION 1 HERO */}
       <main className='min-h-screen bg-black text-white relative overflow-hidden'>
         <div className='absolute inset-0'>
           <div
@@ -75,11 +74,11 @@ export default function Home() {
           </div>
         </section>
       </main>
-
       <About />
       <Skills />
       <Comparison />
       <Portfolio />
+      <Journey />
     </>
   );
 }
